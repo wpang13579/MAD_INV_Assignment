@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/playful">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <!-- Timer -->
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF"
+                android:text="⏰ Timer: 15"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/timer_background"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:elevation="4dp"
+                android:fontFamily="@font/baloo"/>
+
+            <!-- Question -->
+            <TextView
+                android:id="@+id/questionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔍 Which number is bigger?"
+                android:textColor="#333333"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/baloo"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Number Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="32dp">
+
+                <Button
+                    android:id="@+id/leftNumberButton"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:text="10"
+                    android:textSize="36sp"
+                    android:fontFamily="@font/baloo"
+                    android:background="@drawable/round_button"
+                    android:textColor="@android:color/white"
+                    android:elevation="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="or"
+                    android:textColor="#333333"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/baloo"/>
+
+                <Button
+                    android:id="@+id/rightNumberButton"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:text="20"
+                    android:textSize="36sp"
+                    android:fontFamily="@font/baloo"
+                    android:background="@drawable/round_button"
+                    android:textColor="@android:color/white"
+                    android:elevation="6dp"/>
+            </LinearLayout>
+
+            <!-- Result Feedback -->
+            <ImageView
+                android:id="@+id/resultImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="24dp"
+                android:visibility="gone" />
+
+            <!-- Action Buttons -->
+            <Button
+                android:id="@+id/newQuestionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎲 Next!"
+                android:textSize="22sp"
+                android:fontFamily="@font/baloo"
+                android:background="@drawable/round_button"
+                android:textColor="@android:color/white"
+                android:padding="18dp"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/tryAgainButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔁 Try Again"
+                android:textSize="22sp"
+                android:fontFamily="@font/baloo"
+                android:background="@drawable/round_button"
+                android:textColor="@android:color/white"
+                android:padding="18dp"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Back Button floating at top-left -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="Back" />
+</FrameLayout>

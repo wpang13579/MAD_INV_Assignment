@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/playful">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF"
+                android:text="⏰ Timer: 15"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/timer_background"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:elevation="4dp"
+                android:fontFamily="@font/baloo" />
+
+            <TextView
+                android:id="@+id/instructionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose and order the numbers:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/ascendingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="⬆️ Small to Big"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/round_button"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/baloo" />
+
+                <Button
+                    android:id="@+id/descendingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="⬇️ Big to Small"
+                    android:textSize="18sp"
+                    android:padding="12dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/round_button"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/baloo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="32dp">
+
+                <Button
+                    android:id="@+id/number1Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="14"
+                    android:textSize="22sp"
+                    android:padding="20dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/round_button"
+                    android:textColor="@android:color/white"
+                    android:enabled="false"
+                    android:fontFamily="@font/baloo" />
+
+                <Button
+                    android:id="@+id/number2Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="67"
+                    android:textSize="22sp"
+                    android:padding="20dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/round_button"
+                    android:textColor="@android:color/white"
+                    android:enabled="false"
+                    android:fontFamily="@font/baloo" />
+
+                <Button
+                    android:id="@+id/number3Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="23"
+                    android:textSize="22sp"
+                    android:padding="20dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/round_button"
+                    android:textColor="@android:color/white"
+                    android:enabled="false"
+                    android:fontFamily="@font/baloo" />
+
+                <Button
+                    android:id="@+id/number4Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="43"
+                    android:textSize="22sp"
+                    android:padding="20dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/round_button"
+                    android:textColor="@android:color/white"
+                    android:enabled="false"
+                    android:fontFamily="@font/baloo" />
+
+                <Button
+                    android:id="@+id/number5Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="95"
+                    android:textSize="22sp"
+                    android:padding="20dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/round_button"
+                    android:textColor="@android:color/white"
+                    android:enabled="false"
+                    android:fontFamily="@font/baloo" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/checkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅ Check My Answer"
+                android:textSize="20sp"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_button"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/baloo" />
+
+            <!-- Feedback -->
+            <ImageView
+                android:id="@+id/resultImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/correctOrderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/baloo" />
+
+            <Button
+                android:id="@+id/newQuestionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎲 Next!"
+                android:textSize="20sp"
+                android:padding="16dp"
+                android:background="@drawable/round_button"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/baloo" />
+
+            <Button
+                android:id="@+id/tryAgainButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/round_button"
+                android:padding="12dp"
+                android:text="🔁 Try Again"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/baloo" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="Back" />
+</FrameLayout>
